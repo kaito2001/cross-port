@@ -3,8 +3,10 @@ const fs = require("fs");
 require('dotenv').config();
 
 const web3 = new Web3("https://rpc.testnet.fantom.network/");
+const path = require('path');
 
-const contractNFTJson = fs.readFileSync('./abis/nft.json');
+const filePath = path.join(__dirname, '../abis/nft.json');
+const contractNFTJson = fs.readFileSync(filePath);
 const NFTAbi = JSON.parse(contractNFTJson);
 const {getGasPrice, getNonce} = require('./utils.js');
 

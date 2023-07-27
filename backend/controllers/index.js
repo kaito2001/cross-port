@@ -7,25 +7,22 @@ const web3 = new Web3("https://rpc.testnet.fantom.network/");
 
 async function generateMint(req, res, next) {
     try {
-        await mint().then(
-            (receipt) => {
-                console.log(receipt);
-                mintSoul.then(
-                    (receipt) => { 
-                        console.log(receipt);
-                        bondSoul(req.address).then((receipt) => {console.log(receipt)},
-                    (error) => {
-                        console.error(error);
-                    });
-            },
-            (error) => {
-                console.error(error);
-            })}
+        // Mint NFT
+        const mintReceipt = await mint();
+        console.log('Mint Receipt:', mintReceipt);
 
-        );
+        // Mint Soulbound NFT
+        const soulMintReceipt = await mintSoul();
+        console.log('Soul Mint Receipt:', soulMintReceipt);
+
+        // Bond Soulbound NFT
+        const bondSoulReceipt = await bondSoul(req.params.address); 
+        console.log('Bond Soul Receipt:', bondSoulReceipt);
+        res.json({ message: 'NFT mint and soulbound successfully' });
+        
     } catch (error) {
         console.log(error);
     }
 }
 
-module.exports = {generateMint}
+module.exports = {generateMint};

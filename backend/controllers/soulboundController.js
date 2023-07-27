@@ -1,7 +1,10 @@
 const Web3 = require('web3');
 const fs = require("fs");
 require('dotenv').config();
-const contractSoulJson = fs.readFileSync('./abis/soulbound.json');
+const path = require('path');
+
+const filePath = path.join(__dirname, '../abis/soulbound.json');
+const contractSoulJson = fs.readFileSync(filePath);
 const SoulAbi = JSON.parse(contractSoulJson);
 const {getGasPrice, getNonce} = require('./utils.js');
 const web3 = new Web3("https://rpc.testnet.fantom.network/");

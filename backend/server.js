@@ -29,9 +29,9 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-require("./routes//genNFTRoute")(app);
-require("./routes/authRoute")(app);
-// require("./routes//genNFTRoute")(app);
+require("./routes/authRoute")(app); 
+// require("./routes/genNFTRoute")(app);
+console.log("Check");
 app.listen(port, () => {
   console.log(`Node server started in port ${port}`);
 });
