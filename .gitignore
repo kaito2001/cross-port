@@ -1,0 +1,8 @@
+.vscode
+.env*
+.env
+oraicli.env
+*.log
+**/node_modules
+/dist
+/tmp
