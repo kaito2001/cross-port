@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "gene",
+						"type": "address"
+					}
+				],
+				"name": "bump",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "what",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "data",
+						"type": "uint256"
+					}
+				],
+				"name": "file",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/CrossDao.sol": "ISoulbound"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/CrossDao.sol": {
+			"keccak256": "0xd39f8488f791c199e1bc409e8b3ba7ba392327a86b4bafbf7b6bae38a215b51e",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://879bc811e5e644bf827a3cbe2e76c5d3d3acc1218eb7a1a4354d749c0b207129",
+				"dweb:/ipfs/QmTjTvoh1o4p8VG1FcRy9KpZ1TuZMppSNvzQpkfUS4GDtv"
+			]
+		}
+	},
+	"version": 1
+}
