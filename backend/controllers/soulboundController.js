@@ -19,7 +19,7 @@ const createSoulBoundContract = () => {
     return contract;
 };
 
-const mintSoul = async () => { console.log('mint');
+const mintSoul = async () => { 
     const SoulContract = createSoulBoundContract();
     const encodedTransaction = await SoulContract.methods
         .mint(

@@ -1,3 +1,6 @@
+const Web3 = require('web3');
+const web3 = new Web3("https://rpc.testnet.fantom.network/");
+
 const getGasPrice = async () => {
   try {
     const gasPrice = await web3.eth.getGasPrice();
