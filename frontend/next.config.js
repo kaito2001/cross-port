@@ -11,7 +11,10 @@ const nextConfig = {
     FACEBOOK_CLIENT_SECRET: process.env.FACEBOOK_CLIENT_SECRET,
     
     // Smart Contract Address
-    CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS
+    CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
+    
+    // Next Auth Secret
+    SECRET: process.env.SECRET,
   },
   images: {
     domains: [
