@@ -12,7 +12,6 @@ export default NextAuth({
       clientId: process.env.FACEBOOK_CLIENT_ID!,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET!,
     }),
-    // Add other providers here if needed (e.g., GitHub, Facebook, etc.)
   ],
-  // Add any additional NextAuth.js configurations here
+  secret: process.env.SECRET
 })
