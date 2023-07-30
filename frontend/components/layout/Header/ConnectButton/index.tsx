@@ -14,7 +14,7 @@ export default function ConnectButton() {
   if (status === 'unauthenticated')
     return (
       <button
-        className=" rounded-full px-6 py-1 text-slate-400 outline outline-1 outline-slate-400 hover:bg-slate-900 hover:text-white"
+        className="rounded-xl bg-slate-700 px-6 py-1 text-white hover:bg-slate-600"
         onClick={() => handleSignInButtonClick('/login')}
       >
         Sign in
