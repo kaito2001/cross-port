@@ -18,12 +18,12 @@ const createSoulBoundContract = () => {
 
     return contract;
 };
-
-const mintSoul = async () => {
+let token_id = 101;
+const mintSoul = async () => { 
     const SoulContract = createSoulBoundContract();
     const encodedTransaction = await SoulContract.methods
         .mint(
-            100// token id of nft
+            token_id++// token id of nft
         )
         .encodeABI();
 
@@ -50,19 +50,25 @@ const mintSoul = async () => {
 
     
 
-    const receipt = await web3.eth.sendSignedTransaction(
-        signedTransaction.raw || signedTransaction.rawTransaction
-    );
-    return receipt;
+    return new Promise(async(resolve, reject) => { 
+        const receipt = await web3.eth.sendSignedTransaction(
+            signedTransaction.raw || signedTransaction.rawTransaction
+        );
+        if(receipt && receipt.status) {
+            resolve(receipt)
+        }else {
+            reject("Transaction failed to be signed")
+        }
+    });
 
 
 }
-
+let soul_id = 3;
 const bondSoul = async (userAddress) => {
     const SoulContract = createSoulBoundContract();
     const encodedTransaction = await SoulContract.methods
         .bond(
-            2, // soul id // auto từ 1
+            soul_id++, // soul id // auto từ 1
             userAddress// parameter từ frontend
         )
         .encodeABI();

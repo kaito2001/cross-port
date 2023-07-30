@@ -21,14 +21,14 @@ const createNFTContract = () => {
 };
 
 
-
+let token_id = 101;
 const mint = async () => {
     const NFTContract = createNFTContract();
 
     const encodedTransaction = await NFTContract.methods
         .mint(
             process.env.ACCOUNT_OWNER,
-            100 // token_id of nft
+            token_id++ // token_id of nft
         )
         .encodeABI();
 
@@ -68,6 +68,4 @@ const mint = async () => {
 
 }
 
-module.exports = {
-  mint
-};
+module.exports = {mint};

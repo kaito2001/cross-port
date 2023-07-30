@@ -5,7 +5,7 @@ const keys = require("./config/config");
 let cookieSession = require("cookie-session");
 const passport = require("passport");
 const port = process.env.PORT || 5000;
-
+const genNFTRoute = require("./routes/genNFTRoute");
 require("./models/User");
 require("./services/passport");
 
@@ -29,9 +29,9 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 require("./routes/authRoute")(app); 
-// require("./routes/genNFTRoute")(app);
-console.log("Check");
+app.use('/nft', genNFTRoute);
 app.listen(port, () => {
   console.log(`Node server started in port ${port}`);
 });
