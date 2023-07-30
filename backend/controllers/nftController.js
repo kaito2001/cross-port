@@ -68,6 +68,4 @@ const mint = async () => {
 
 }
 
-module.exports = {
-  mint
-};
+module.exports = {mint};

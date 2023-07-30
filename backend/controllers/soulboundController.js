@@ -19,7 +19,7 @@ const createSoulBoundContract = () => {
     return contract;
 };
 
-const mintSoul = async () => {
+const mintSoul = async () => { console.log('mint');
     const SoulContract = createSoulBoundContract();
     const encodedTransaction = await SoulContract.methods
         .mint(
@@ -50,10 +50,16 @@ const mintSoul = async () => {
 
     
 
-    const receipt = await web3.eth.sendSignedTransaction(
-        signedTransaction.raw || signedTransaction.rawTransaction
-    );
-    return receipt;
+    return new Promise(async(resolve, reject) => { 
+        const receipt = await web3.eth.sendSignedTransaction(
+            signedTransaction.raw || signedTransaction.rawTransaction
+        );
+        if(receipt && receipt.status) {
+            resolve(receipt)
+        }else {
+            reject("Transaction failed to be signed")
+        }
+    });
 
 
 }
