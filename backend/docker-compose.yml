@@ -1,0 +1,8 @@
+version: '3'
+services:
+  your_service_name:
+    image: cross-port
+    ports:
+      - "9000:9001"
+    env_file:
+      - .env
