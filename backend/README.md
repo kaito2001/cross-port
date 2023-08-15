@@ -15,7 +15,7 @@ This API provides functionalities related to creating and managing Non-Fungible 
    - Create a new NFT by sending a request to the API along with information about the NFT such as name, description, image, and other relevant details.
    - This request triggers the process of minting a unique NFT on the Ethereum blockchain and stores information about the NFT in the database.
 
-2. View List of Created NFTs
+2. View the List of Created NFTs
    - Returns a list of previously created NFTs, including information about each NFT such as name, description, and image.
 
 3. View NFT Details
@@ -68,7 +68,7 @@ This API provides functionalities related to creating and managing Non-Fungible 
 [downloads-url]: https://npmjs.org/package/path-to-regexp
 [build-image]: https://img.shields.io/github/workflow/status/pillarjs/path-to-regexp/CI/master
 [build-url]: https://github.com/kaito2001/cross-port/tree/81f160546c4c0041e30e8c902bb0103bdcae3f18/backend
-[coverage-image]: https://img.shields.io/codecov/c/gh/pillarjs/path-to-regexp
-[coverage-url]: https://codecov.io/gh/pillarjs/path-to-regexp
+<!-- [coverage-image]: https://img.shields.io/codecov/c/gh/pillarjs/path-to-regexp -->
+<!-- [coverage-url]: https://codecov.io/gh/pillarjs/path-to-regexp -->
 <!-- [license-image]: http://img.shields.io/npm/l/path-to-regexp.svg?style=flat -->
 <!-- [license-url]: LICENSE.md -->
