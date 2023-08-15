@@ -2,7 +2,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build status][build-image]][build-url]
-[![Build coverage][coverage-image]][coverage-url]
+<!-- [![Build coverage][coverage-image]][coverage-url] -->
 <!-- [![License][license-image]][license-url] -->
 
 # API Functionality Description
